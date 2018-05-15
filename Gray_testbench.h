@@ -1,0 +1,7 @@
+#ifndef GRAY_COUNTER_TESTBENCH
+#define GRAY_COUNTER_TESTBENCH
+
+
+
+
+#endif

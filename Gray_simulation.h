@@ -1,4 +1,8 @@
+#ifndef GRAY_COUNTER
+#define GRAY_COUNTER
+
 #include <systemc.h>
+
 
 SC_MODULE(gray_counter) {
     sc_in<sc_logic> rst_i, clk_i;
@@ -30,4 +34,4 @@ SC_MODULE(gray_counter) {
     }
 };
 
-
+#endif
