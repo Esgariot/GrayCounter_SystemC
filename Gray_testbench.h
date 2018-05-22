@@ -3,17 +3,20 @@
 #include <systemc.h>
 
 SC_MODULE(gray_counter_testbench) {
-    
-    sc_in<sc_logic> rst_i;
-    sc_in<sc_logic> clk_i;
+    sc_out<sc_logic> clk_i;
     
     SC_CTOR(gray_counter_testbench) {
-        SC_METHOD(process);
-    
+        SC_THREAD(process);
+        dont_initialize();
     }
 
     void process() {
-    
+        const sc_time TIME_PERIOD(5, SC_NS);
+        while(true){
+            clk_i.write(SC_LOGIC_1);
+            wait(TIME_PERIOD);
+            clk_i.write(SC_LOGIC_0);  
+        }
     }
 };
 

@@ -14,7 +14,9 @@ SC_MODULE(gray_counter) {
 
     SC_CTOR(gray_counter) {
         SC_METHOD(process);
+        led_o.initialize(0);
         sensitive << clk_i << rst_i;
+        dont_initialize();
     }
 
     void process() {
