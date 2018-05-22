@@ -7,7 +7,6 @@ SC_MODULE(gray_counter_testbench) {
     
     SC_CTOR(gray_counter_testbench) {
         SC_THREAD(process);
-        dont_initialize();
     }
 
     void process() {

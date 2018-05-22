@@ -6,8 +6,7 @@ int sc_main(int argc, char* argv[])
 {
     sc_trace_file *gray_counter_tracefile;
     sc_signal<sc_logic> connector_reset, connector_clock;
-    sc_inout<sc_bv<3>> connector_led;
-
+    sc_signal<sc_bv<3>> connector_led;
     sc_set_time_resolution(100, SC_PS);
     sc_clock clk("clock", 10, SC_NS, 0.6, 2, SC_NS, false);
     connector_reset = SC_LOGIC_0;
