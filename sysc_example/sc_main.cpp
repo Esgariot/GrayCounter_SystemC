@@ -53,7 +53,7 @@ int sc_main(int argc, char* argv[])
 {
 // Signals:
     sc_signal<sc_uint<8> > din, dout1, dout2, dout3, dcntr;
-    sc_signal<sc_logic > rst;
+    sc_signal<sc_logic > connector_reset;
 
 // Set simulation time resolution:
     sc_set_time_resolution(100, SC_PS);
